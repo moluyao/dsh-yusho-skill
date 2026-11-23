@@ -1,0 +1,65 @@
+{
+  "name": "dsh-yusho-skill",
+  "version": "0.1.0",
+  "description": "鱼Sho 连接器：让电脑上的 Codex、Claude Code、DSH 出现在手机的鱼Sho 里，直接对话、派活（端到端加密）。可以单独运行，也可以装进 DSH",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "yusho-connect": "bin/yusho-connect.mjs"
+  },
+  "main": "lib/dsh-plugin.mjs",
+  "exports": {
+    ".": "./lib/dsh-plugin.mjs",
+    "./client": "./lib/client.js",
+    "./connector": "./lib/connector.mjs",
+    "./qr": "./lib/qr.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "dsh.patch.yml",
+    "README.md",
+    "LICENSE",
+    "skill"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@agentclientprotocol/sdk": "^2.7.0",
+    "nostr-tools": "^2.26.1",
+    "qrcode": "^1.5.4"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "yusho",
+    "nostr",
+    "acp",
+    "codex",
+    "claude-code"
+  ],
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.0"
+    },
+    "bundle": {
+      "patch": "./dsh.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-connection"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moluyao/dsh-yusho-skill.git"
+  },
+  "homepage": "https://yusho.chat/connect.md",
+  "bugs": {
+    "url": "https://github.com/moluyao/dsh-yusho-skill/issues"
+  }
+}

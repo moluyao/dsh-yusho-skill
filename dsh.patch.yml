@@ -1,0 +1,4 @@
+# 鱼Sho 连接器：装进 DSH 的哪个 profile，就在那个 profile 里插一行（连接器自己的配置在 ~/.yusho-connect/config.json）
+- insert:
+    - id: dsh-yusho-skill
+      name: 'dsh-yusho-skill'

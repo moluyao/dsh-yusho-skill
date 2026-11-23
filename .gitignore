@@ -1,0 +1,4 @@
+node_modules/
+*.tgz
+.yusho-connect/
+identity.json

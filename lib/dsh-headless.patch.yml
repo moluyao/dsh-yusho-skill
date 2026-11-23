@@ -1,0 +1,4 @@
+# 执行端调用 DSH headless 时附加的补丁：启用本机凭证服务，复用 Web 版里已保存的模型密钥。
+# 只在本次进程生效，不修改 ~/.dsh 下的任何文件。
+- id: credentials
+  disabled: false
