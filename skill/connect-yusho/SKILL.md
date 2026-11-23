@@ -23,7 +23,7 @@ description: 帮用户把这台电脑连到手机上的“鱼Sho”App：装上�
 dsh plugin --profile web add https://yusho.chat/connect/dsh-yusho-skill.tgz
 ```
 
-装完让用户重启 DSH 网页版，侧栏会多一个“🐟 鱼Sho”，点开就是连接页面。然后跳到第 4 步。
+装完让用户重启 DSH 网页版，侧栏会多一个“鱼Sho”，点开就是连接页面。然后跳到第 4 步。
 
 其他情况：
 

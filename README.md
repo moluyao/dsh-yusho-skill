@@ -25,7 +25,7 @@
 dsh plugin --profile web add https://yusho.chat/connect/dsh-yusho-skill.tgz
 ```
 
-重启 DSH 网页版，侧栏出现“🐟 鱼Sho”，点开就是连接页面。
+重启 DSH 网页版，侧栏出现“鱼Sho”，点开就是连接页面。
 
 ### 自己装
 
@@ -45,6 +45,13 @@ yusho-connect
 | `yusho-connect pair` | 再连一部手机 |
 
 Codex 的适配器带着一整份 Codex（几百 MB），不放进安装包：第一次让 Codex 干活时自动下载，之后就快了。
+
+## 0.1.1 修了什么
+
+- DSH 网页版加载不了连接器面板（报 `1 entry did not activate`）：面板代码里有个语法错误，已修；打包前会自动做语法检查。
+- 用 pnpm 装（不自动装 peer 依赖）时缺 `zod`：已经写进依赖。
+- Linux 上手机派活给 DSH 报 `internal error`：调用 DSH 时补丁路径多加了引号；另外 DSH 现在会用你在网页版里选好的模型和密钥。出错时手机上能看到具体原因，不再只有一句 internal error。
+- 侧栏图标换成鱼Sho 现在的标志。
 
 ## 已知问题（0.1.0）
 
