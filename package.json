@@ -1,6 +1,6 @@
 {
   "name": "dsh-yusho-skill",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "鱼Sho 连接器：让电脑上的 Codex、Claude Code、DSH 出现在手机的鱼Sho 里，直接对话、派活（端到端加密）。可以单独运行，也可以装进 DSH",
   "type": "module",
   "license": "MIT",

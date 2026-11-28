@@ -46,6 +46,11 @@ yusho-connect
 
 Codex 的适配器带着一整份 Codex（几百 MB），不放进安装包：第一次让 Codex 干活时自动下载，之后就快了。
 
+## 0.1.4 新增
+
+- 卡住的活自动停：Agent 10 分钟没有任何输出、也不在等你批，就自动叫停，免得白白耗额度（环境变量 `YUSHO_STALL_MS` 可以改时长，最少 1 分钟）。一件活最长 30 分钟的上限照旧。
+- 手机重发同一件活（之前没收到接单）不会做两遍：在做就再回一次接单，做完了就把结果再发一遍。
+
 ## 0.1.3 新增
 
 - 手机上能给 Codex、Claude Code 选模型、思考等级、快速模式：连接器从 Agent 报上来的 ACP 配置项（configOptions）里读可选项告诉手机，派活时按手机的选择用 `session/set_config_option` 设好。已用真的 Codex（codex-acp 2.9.0）验证；Claude Code 的适配器报了这些选项就同样能用。
